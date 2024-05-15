@@ -37,7 +37,7 @@
 
 * ```bash
   airflow db migrate
-  airflow users  create --role Admin --username admin --email admin --firstname admin --lastname admin --password admin
+  airflow users  create --role Admin --username master_admin --email admin@email.com --firstname admin --lastname admin --password admin_pssw
   airflow webserver --port 8080
   airflow scheduler
   ```
