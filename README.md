@@ -9,15 +9,15 @@
   >>> sudo apt-get install postgresql postgresql-contrib
   >>> sudo systemctl start postgresql.service
   >>> sudo -u postgres createuser --interactive
-  Enter name of role to add: pg_db_super_usr
+  Enter name of role to add: postgresql_db_super_usr
   Shall the new role be a superuser? (y/n) y
   >>> sudo -u postgres psql
   postgres=# CREATE DATABASE airflow_pg_db;
-  postgres=# CREATE USER af_usr WITH PASSWORD 'af_pass'
-  postgres=# GRANT ALL PRIVILEGES ON DATABASE airflow_pg_db TO af_usr;
+  postgres=# CREATE USER af_pg_usr WITH PASSWORD 'af_pg_pssw';
+  postgres=# GRANT ALL PRIVILEGES ON DATABASE airflow_pg_db TO af_pg_usr;
   postgres=# \l
   postgres=# \c airflow_pg_db
-  airflow_pg_db=# GRANT ALL ON SCHEMA public TO af_usr;
+  airflow_pg_db=# GRANT ALL ON SCHEMA public TO af_pg_usr;
   ```
 
 
